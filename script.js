@@ -1,9 +1,19 @@
-console.log('js ready');
+console.log("js ready");
 
+//select all things w/ this class ??
 const cards = document.querySelectorAll(".card");
 
- const observer = new IntersectionObserver(entries => {
-     console.log('entries', entries);
- })
+//entries literally translates to "things that have entered (screen / root) ??"
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle("show", entry.isIntersecting); //targets thing we are looking at WITH CLASS LIST and in this case is "show"...if intersection is true, adds show class
+  });
+  console.log("entries", entries);
+});
 
- observer.observe(cards[0]);
+cards.forEach(card => {
+    observer.observe(card);
+})
+
+
+ 
