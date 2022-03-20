@@ -21,15 +21,34 @@ h1 {
     align-items: center;
 }
 
+.card:first-of-type{
+    background-color: green;
+}
+
+.card:last-of-type{
+    background-color: blue;
+}
+
 .card {
     background: #ff000025;
     padding: 0.5em 1em;
     border-radius: 12px;
     border: 1px solid black;
-    transition: 300ms;
-    opacity: 0;
+
+  
     font-size: 2rem;
+}
+
+.fromLeft {
+    transition: 600ms;
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.fromRight {
+    transition: 600ms;
     transform: translateX(100px);
+    opacity: 0;
 }
 
 .card.show {
