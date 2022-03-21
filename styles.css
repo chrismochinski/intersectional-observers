@@ -40,20 +40,18 @@ h1 {
     padding: 0.5em 1em;
     border-radius: 12px;
     border: 1px solid black;
-
-  
     font-size: 2rem;
 }
 
 .fromLeft {
-    transition: 600ms;
-    transform: translateX(-100px);
+    transition: 1s;
+    transform: translateX(-150px);
     opacity: 0;
 }
 
 .fromRight {
-    transition: 600ms;
-    transform: translateX(100px);
+    transition: 1s;
+    transform: translateX(150px);
     opacity: 0;
 }
 
